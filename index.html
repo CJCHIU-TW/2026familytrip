@@ -37,7 +37,7 @@ h2{font-size:22px;margin:0 0 12px;display:inline-block;background:var(--yellow);
 .route .line i{position:absolute;left:50%;top:-14px;transform:translateX(-50%);background:var(--paper);padding:0 4px;font-style:normal;font-size:18px}
 .note{font-size:12px;margin:8px 0 0}
 .tag{display:inline-block;font-size:12px;border:2px solid var(--ink);border-radius:999px;padding:0 9px;margin-right:4px;background:var(--sky)}
-.tag.fly{background:var(--sky)}.tag.train{background:var(--green)}.tag.spot{background:var(--coral)}.tag.food{background:var(--yellow)}.tag.hotel{background:var(--paper)}.tag.shop{background:var(--yellow)}.tag.walk{background:var(--paper)}.tag.bus{background:var(--sky)}.guide .card{margin-bottom:12px}.guide h3{margin:4px 0;font-size:17px;font-weight:normal}.guide ul{margin:6px 0 0;padding-left:20px;font-size:14px}.guide li{margin-bottom:4px}.guide.tip{display:none}.guide.tip.show{display:block}.wx{margin:0 0 12px;font-size:14px;background:var(--sky);border:3px solid var(--ink);border-radius:16px;padding:4px 12px}.wxr{padding:8px 0;border-bottom:2px dotted var(--ink)}.wxr:last-of-type{border:0}.wxr b{display:block}.wxr small{display:block;font-size:12px}
+.tag.fly{background:var(--sky)}.tag.train{background:var(--green)}.tag.spot{background:var(--coral)}.tag.food{background:var(--yellow)}.tag.hotel{background:var(--paper)}.tag.shop{background:var(--yellow)}.tag.walk{background:var(--paper)}.tag.bus{background:var(--sky)}.tag.car{background:var(--yellow)}.wx a{color:var(--ink)}.tl h3 a{color:var(--ink);text-decoration:underline dotted}.map{display:inline-block;margin:2px 0 6px;font-size:13px;border:2px solid var(--ink);border-radius:999px;padding:0 10px;color:var(--ink);text-decoration:none;background:var(--sky)}.guide .card{margin-bottom:12px}.guide h3{margin:4px 0;font-size:17px;font-weight:normal}.guide ul{margin:6px 0 0;padding-left:20px;font-size:14px}.guide li{margin-bottom:4px}.guide.tip{display:none}.guide.tip.show{display:block}.wx{margin:0 0 12px;font-size:14px;background:var(--sky);border:3px solid var(--ink);border-radius:16px;padding:4px 12px}.wxr{padding:8px 0;border-bottom:2px dotted var(--ink)}.wxr:last-of-type{border:0}.wxr b{display:block}.wxr small{display:block;font-size:12px}
 .must{background:var(--ink);color:var(--yellow);border-color:var(--ink)}
 .tabs{display:flex;gap:8px;overflow-x:auto;padding:4px 2px 10px}
 .tabs button{flex:none;font:inherit;color:var(--ink);background:var(--paper);border:3px solid var(--ink);border-radius:20px;padding:4px 14px;text-align:center;cursor:pointer;line-height:1.3}
@@ -117,7 +117,7 @@ footer{text-align:center;margin-top:28px;font-size:13px}
 <div class="route"><div><div class="t">08:45</div><small>桃園 TPE 起飛</small></div><div class="line"><i>✈</i></div><div><div class="t">12:25</div><small>名古屋 NGO 抵達</small></div></div></div>
 <div class="card flight"><span class="tag fly">回程</span> <b>IT207</b> ・ NGO → TPE ・ 11/17（二）
 <div class="route"><div><div class="t">13:15</div><small>名古屋 NGO 起飛</small></div><div class="line"><i>✈</i></div><div><div class="t">15:50</div><small>桃園 TPE 抵達</small></div></div>
-<p class="note">回程時間依虎航官方冬季時刻表；去程 08:45 起飛是依去年冬季班表推估。你行程表的 05:45 與 10:15 是到機場報到的時間，出發前請再確認航班。</p></div>
+<p class="note">回程時間依虎航官方冬季時刻表；去程 08:45 起飛是依去年冬季班表推估。你行程表的 06:15 與 10:15 是到機場報到的時間，出發前請再確認航班。</p></div>
 </section>
 
 <section id="days">
@@ -128,7 +128,7 @@ footer{text-align:center;margin-top:28px;font-size:13px}
 <ul class="tl" id="tl"></ul>
 </section>
 
-<section id="guide" class="guide tip" data-days="1">
+<section id="guide" class="guide tip" data-days="2">
 <h2>⛩ 伊勢神宮參拜小抄</h2>
 <div class="card"><span class="tag spot">第一站</span><span class="tag">約 30–60 分</span><h3>外宮（豐受大神宮）</h3>
 <ul><li><b>順序：</b>火除橋 → 手水舍 → 正宮 → 多賀宮（石階上）→ 土宮 → 風宮</li>
@@ -146,7 +146,7 @@ footer{text-align:center;margin-top:28px;font-size:13px}
 <li>公車時間、營業時間與各宮社開放狀況，出發前請看官方公告再確認。</li></ul></div>
 </section>
 
-<section id="spots" class="guide tip" data-days="2">
+<section id="spots" class="guide tip" data-days="3">
 <h2>🏯 犬山・清洲小抄</h2>
 <div class="card"><span class="tag train">票券</span><h3>犬山城下町套票 約 ¥1,950</h3>
 <ul><li>含名鐵名古屋↔犬山遊園（犬山）來回車票、犬山城門票、有樂苑與城下町折價券，請在名鐵名古屋站窗口購買。</li>
@@ -168,7 +168,7 @@ footer{text-align:center;margin-top:28px;font-size:13px}
 <li>長輩提醒：天守有階梯，可選擇在地面看光雕，戶外夜晚較冷，記得帶外套。</li></ul></div>
 </section>
 
-<section id="last" class="guide tip" data-days="3">
+<section id="last" class="guide tip" data-days="4">
 <h2>🍜 名古屋小抄</h2>
 <div class="card"><span class="tag food">11/16 午餐</span><h3>金鯱橫丁 義直區</h3>
 <ul><li>在名古屋城正門前，聚集味噌煉烏龍、鰻魚飯三吃、味噌豬排等名古屋飯。</li>
@@ -184,7 +184,7 @@ footer{text-align:center;margin-top:28px;font-size:13px}
 <li>無印良品在 Maruei Galleria 2 樓，為名古屋市內最大賣場。</li>
 <li>兩間都在榮站附近，我沒查到同一棟有兩個品牌的商場，請用地圖確認步行距離與營業時間。</li></ul></div>
 </section>
-<section id="last5" class="guide tip" data-days="4">
+<section id="last5" class="guide tip" data-days="5">
 <h2>🛫 回程小抄</h2>
 <div class="card"><span class="tag fly">11/17 回程</span><h3>建議 08:45 從飯店出發</h3>
 <ul><li>IT207 13:15 起飛、15:50 抵達桃園。你的行程表訂在 10:15 到機場，提前約 3 小時。</li>
@@ -195,12 +195,12 @@ footer{text-align:center;margin-top:28px;font-size:13px}
 
 <section id="wxsec" class="guide">
 <h2>🌤 天氣與穿搭</h2>
-<div class="card"><p class="note" style="margin:0 0 6px">11 月中旬已入秋，早晚涼、白天舒適。請用「洋蔥式穿搭」方便增減衣物。氣溫為參考預報，出發前請再確認。</p>
-<div class="wxr"><b>11/13（五）伊勢</b>8–20°C・晴時多雲<small>長袖上衣＋薄毛衣＋外套</small></div>
-<div class="wxr"><b>11/14（六）伊勢神宮</b>10–20°C・晴，局部多雲<small>長袖上衣＋薄外套</small></div>
-<div class="wxr"><b>11/15（日）犬山城、清洲城</b>12–20°C・多雲，午後可能降雨<small>長袖上衣＋防風外套，帶折疊傘</small></div>
-<div class="wxr"><b>11/16（一）熱田神宮、名古屋城</b>12–21°C・多雲，白天較舒適<small>長袖上衣＋薄外套</small></div>
-<div class="wxr"><b>11/17（二）前往機場</b>11–20°C・多雲時晴<small>長袖上衣＋方便穿脫的外套</small></div></div>
+<div class="card"><p class="note" style="margin:0 0 6px">11 月中旬已入秋，早晚涼、白天舒適。請用「洋蔥式穿搭」方便增減衣物。資料來自 tenki.jp 名古屋市預報（11/8 08:00 發布），伊勢與犬山會略有差異。頁面無法自動連網更新，出發前請點各日的 tenki.jp 連結再確認。</p>
+<div class="wxr"><b>11/13（五）伊勢</b>9–21°C・晴・降水 20%<small>長袖上衣＋薄毛衣＋外套</small></div>
+<div class="wxr"><b>11/14（六）伊勢神宮</b>9–21°C・晴のち曇・降水 30%<small>清晨約 9°C，長袖＋外套，可加薄圍巾</small></div>
+<div class="wxr"><b>11/15（日）犬山城、清洲城</b>14–18°C・曇のち雨・降水 90%（預估約 24mm）<small>防水外套、雨傘、防水鞋；夜間活動與夜市可能受影響</small></div>
+<div class="wxr"><b>11/16（一）熱田神宮、名古屋城</b>15–23°C・曇のち晴・降水 30%<small>長袖上衣＋薄外套，中午偏暖</small></div>
+<div class="wxr"><b>11/17（二）前往機場</b>11–18°C・晴一時雨・降水 50%<small>早上約 11°C，長袖＋外套，帶折疊傘</small></div></div>
 <div class="card"><span class="tag spot">穿搭方式</span>
 <ul><li><b>上半身：</b>內搭長袖上衣或薄發熱衣，中層薄毛衣、針織衫或帽T，外層風衣、休閒外套或輕薄羽絨外套。</li>
 <li><b>下半身：</b>長褲、牛仔褲或舒適休閒褲，怕冷的長輩可加保暖內搭褲。</li>
@@ -208,7 +208,7 @@ footer{text-align:center;margin-top:28px;font-size:13px}
 <div class="card"><span class="tag food">特別提醒</span>
 <ul><li>早晚溫差大，約 8–14°C，外出請帶外套。</li>
 <li>中午約 18–22°C，走路可能偏熱，衣物要方便穿脫。</li>
-<li>11/15 午後降雨機率提高，請準備折疊傘或輕便雨衣。</li>
+<li>11/15 預報降雨機率 90%、雨量偏大，請準備輕便雨衣或雨傘、防水鞋，行程可能需要調整。</li>
 <li>神宮與城堡步行多，請穿舒適防滑的鞋。</li>
 <li>薄圍巾、輕便外套與少量暖暖包，怕冷的長輩可視需要攜帶。</li>
 <li>不需要厚重冬季羽絨衣，但也不建議只穿短袖或單薄衣物。</li></ul></div>
@@ -222,34 +222,37 @@ footer{text-align:center;margin-top:28px;font-size:13px}
 
 <section id="stay">
 <h2>🛏 住宿資訊</h2>
-<div class="card stay"><span class="tag hotel">11/13 – 11/14</span><h3>Comfort Hotel 伊勢</h3><p>1 晚 ・ 伊勢市站周邊，步行即達，方便參拜外宮與內宮。</p></div>
-<div class="card stay"><span class="tag hotel">11/14 – 11/17</span><h3>海茵娜酒店 Express 名古屋伏見站前</h3><p>3 晚 ・ 名古屋據點，往犬山、清洲、熱田與名古屋城都方便。</p></div>
+<div class="card stay"><span class="tag hotel">11/12 – 11/13</span><h3>青埔飯店</h3><a class="map" href="https://www.google.com/travel/search?ts=CAESCgoCCAMKAggDEAAaHBIaEhQKBwjqDxALGA8SBwjqDxALGBAYATICEAAqBwoFOgNUV0Q&amp;qs=CAEyE0Nnb0kyZV8wbnBQTnJiNVZFQUU4CkIJEdcu-7s6U2otQgkRL3VZ9-gpw_dCCRFfSQCbwHFdJFpJCAEyRaoBQhABKgoiBumjr-W6lyhFMh4QASIal6GVLAoOsKFonR_Xx_spFqvD0aqIPNKQCtUyEhACIg7pnZIg5Z-UIOmjr-W6lw&amp;utm_campaign=sharing&amp;utm_medium=link_btn&amp;utm_source=htls" target="_blank" rel="noopener">📍 Google 旅遊</a><p>1 晚 ・ 行前集合日住宿，隔天 06:00 搭機場接送。</p></div>
+<div class="card stay"><span class="tag hotel">11/13 – 11/14</span><h3>Comfort Hotel 伊勢</h3><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Comfort+Hotel+Ise" target="_blank" rel="noopener">📍 Google 地圖</a><p>1 晚 ・ 伊勢市站周邊，步行即達，方便參拜外宮與內宮。</p></div>
+<div class="card stay"><span class="tag hotel">11/14 – 11/17</span><h3>海茵娜酒店 Express 名古屋伏見站前</h3><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Henn+na+Hotel+Express+Nagoya+Fushimi+Ekimae" target="_blank" rel="noopener">📍 Google 地圖</a><p>3 晚 ・ 名古屋據點，往犬山、清洲、熱田與名古屋城都方便。</p></div>
 </section>
 <footer>🌸 旅途愉快，慢慢走慢慢玩 🌸</footer>
 </main>
 <script>
-const KIND={fly:"飛機",train:"電車",spot:"景點",food:"美食",hotel:"住宿",shop:"購物",walk:"步行",bus:"公車"};
+const KIND={fly:"飛機",train:"電車",spot:"景點",food:"美食",hotel:"住宿",shop:"購物",walk:"步行",bus:"公車",car:"接送"};
 const DAYS=[
+{d:"11/12",w:"四",c:"#F6D27A",t:"行前集合日：高鐵北上桃園",i:[["19:35","train","高鐵左營站出發"],["21:09","train","抵達高鐵桃園站"],["抵達後","car","搭計程車前往青埔飯店"],["晚上","hotel","青埔飯店住宿（明早 06:00 搭機場接送）",0,"https://www.google.com/travel/search?ts=CAESCgoCCAMKAggDEAAaHBIaEhQKBwjqDxALGA8SBwjqDxALGBAYATICEAAqBwoFOgNUV0Q&qs=CAEyE0Nnb0kyZV8wbnBQTnJiNVZFQUU4CkIJEdcu-7s6U2otQgkRL3VZ9-gpw_dCCRFfSQCbwHFdJFpJCAEyRaoBQhABKgoiBumjr-W6lyhFMh4QASIal6GVLAoOsKFonR_Xx_spFqvD0aqIPNKQCtUyEhACIg7pnZIg5Z-UIOmjr-W6lw&utm_campaign=sharing&utm_medium=link_btn&utm_source=htls"]]},
 {d:"11/13",w:"五",c:"#F2A497",t:"出發！抵達名古屋，前往伊勢",i:[
-["05:45","fly","抵達桃園機場報到（IT206 約 08:45 起飛）"],["12:25","fly","中部國際機場 NGO（IT206 抵達）"],["13:13","food","Tenmusu Himari"],["13:24","food","Sora Sand 手作三明治"],["13:47","train","中部國際空港駅 搭名鐵機場特急，往名古屋發車"],["14:25","walk","抵達名鐵名古屋，步行前往近鐵名古屋站"],["14:41","train","近鐵名古屋線 急行（往五十鈴川）發車"],["16:23","train","抵達伊勢市"],["16:45","hotel","Comfort Hotel 伊勢，先放行李"],["17:30","food","伊勢鄉土料理 DAIKI（晚餐）"],["20:00","shop","便利商店，購買零食點心"]]},
+["06:00","car","青埔飯店搭機場接送前往桃園機場"],["06:15","fly","抵達桃園機場報到（IT206 約 08:45 起飛）"],["12:25","fly","中部國際機場 NGO（IT206 抵達）"],["13:13","food","Tenmusu Himari"],["13:24","food","Sora Sand 手作三明治"],["13:47","train","中部國際空港駅 搭名鐵機場特急，往名古屋發車"],["14:25","walk","抵達名鐵名古屋，步行前往近鐵名古屋站"],["14:41","train","近鐵名古屋線 急行（往五十鈴川）發車"],["16:23","train","抵達伊勢市"],["16:45","hotel","Comfort Hotel 伊勢，先放行李"],["17:30","food","伊勢鄉土料理 DAIKI（晚餐）"],["20:00","shop","便利商店，購買零食點心"]]},
 {d:"11/14",w:"六",c:"#F6D27A",t:"晨間參拜伊勢神宮，傍晚回名古屋",i:[
-["05:00","hotel","Comfort Hotel 伊勢出發"],["05:13","spot","豐受大神宮（伊勢神宮 外宮）",1],["05:45","spot","外宮別宮 多賀宮（可順遊土宮、風宮）"],["06:30","hotel","回 Comfort Hotel 吃早餐"],["08:00","hotel","退房、寄放行李"],["08:12","bus","搭公車往伊勢神宮內宮"],["約 08:35","spot","皇大神宮（伊勢神宮 內宮）",1],["10:30","food","托福橫丁逛街、午餐"],["13:50","hotel","回 Comfort Hotel 拿行李"],["14:19","train","搭近鐵往名古屋"],["16:04","train","抵達近鐵名古屋（名古屋站）"],["16:52","food","Sumiyaki Unafuji Meieki Store"],["18:05","hotel","海茵娜酒店 Express 名古屋伏見站前"]]},
+["05:00","hotel","Comfort Hotel 伊勢出發"],["05:13","spot","豐受大神宮（伊勢神宮 外宮）",1],["05:45","spot","外宮別宮 多賀宮（可順遊土宮、風宮）"],["06:30","hotel","回 Comfort Hotel 吃早餐"],["08:00","hotel","退房、寄放行李"],["08:12","bus","搭公車往伊勢神宮內宮"],["約 08:35","spot","皇大神宮（伊勢神宮 內宮）",1],["10:30","food","托福橫丁逛街、午餐"],["13:50","hotel","回 Comfort Hotel 拿行李"],["14:19","train","搭近鐵往名古屋"],["16:04","train","抵達近鐵名古屋（名古屋站）"],["16:52","food","Sumiyaki Unafuji Meieki Store"],["18:05","hotel","海茵娜酒店 Express 名古屋伏見站前"],["19:00","shop","唐吉訶德 納屋橋店逛街採買"]]},
 {d:"11/15",w:"日",c:"#A8D3E6",t:"犬山國寶天守與城下町，傍晚清洲城點燈、逛夜市",i:[
 ["09:00","hotel","海茵娜酒店 Express 名古屋伏見站前"],["09:05","train","地下鐵東山線 伏見→名古屋（1 站），步行到名鐵名古屋"],["09:30","train","名鐵名古屋站窗口買犬山城下町套票"],["約 09:50","train","名鐵犬山線往新鵜沼方向，在犬山遊園站下車（約 28–35 分）"],["約 10:25","walk","抵達犬山遊園站，步行約 10 分到犬山城（若列車不停遊園，於犬山站換車 1 站）"],["10:45","spot","國寶犬山城（約 1 小時）",1],["11:45","spot","三光稻荷神社（城堡山腳）"],["12:15","food","城下町午餐：五平餅、味噌田樂等串物"],["13:00","walk","沿城下町慢慢走回犬山站（約 20 分）"],["13:30","train","犬山站搭車回名鐵名古屋（約 30 分）"],["約 14:15","train","名鐵名古屋轉名古屋本線往新清洲（約 10 分）"],["約 14:45","walk","新清洲站步行約 15 分到清洲城"],["15:00","spot","清洲城天守、清洲公園",1],["16:00","food","夜市：餐車、露店、週日迷你市集"],["17:00","spot","きよすイルミ點燈與投影光雕（每 20 分一場）",1],["19:30","train","搭車返回，約 20:15 回飯店"]]},
 {d:"11/16",w:"一",c:"#B9DAA5",t:"熱田神宮、名古屋城、榮商圈購物與慶功晚宴",i:[
 ["09:00","hotel","海茵娜酒店 Express 名古屋伏見站前"],["09:05","train","地下鐵鶴舞線轉名城線到熱田神宮傳馬町（約 25–30 分）"],["09:30","spot","熱田神宮本宮參拜、草薙館（約 75 分）",1],["10:50","train","名城線到名古屋城（約 25 分）"],["11:30","food","金鯱橫丁義直區午餐：山本屋總本家味噌煉烏龍、矢場とん味噌豬排"],["12:45","spot","名古屋城：本丸御殿、金鯱展示",1],["14:30","train","名城線到榮（約 10 分）"],["15:00","shop","榮：UNIQLO 栄スカイル店（5 樓）購物"],["16:15","shop","無印良品 Maruei Galleria（2 樓）購物"],["18:00","food","慶功晚餐（榮商圈）"],["19:30","hotel","東山線榮→伏見回飯店"]]},
 {d:"11/17",w:"二",c:"#F2A497",t:"回家囉，滿載回憶",i:[
 ["08:45","hotel","海茵娜酒店 Express 名古屋伏見站前"],["09:05","train","地下鐵伏見→名古屋，步行到名鐵名古屋"],["約 09:30","train","名鐵特急往中部國際機場（約 28–35 分）"],["約 10:05","train","抵達中部國際機場站，步行約 5 分到航廈"],["10:15","fly","抵達機場報到、托運行李（IT207）"],["13:15","fly","IT207 名古屋 NGO 起飛"],["15:50","fly","抵達桃園國際機場 TPE"]]}];
-const TODO=["護照（效期 6 個月以上）","Visit Japan Web 填寫","日幣現金與信用卡","網卡或 eSIM","電車票券／IC 卡","伊勢住宿與餐廳預約確認","行動電源與充電線","常備藥品與雨具"];
-const WX=["8–20°C ・ 晴時多雲 ・ 長袖上衣＋薄毛衣＋外套","10–20°C ・ 晴，局部多雲 ・ 長袖上衣＋薄外套","12–20°C ・ 多雲，午後可能降雨 ・ 長袖上衣＋防風外套，帶雨具","12–21°C ・ 多雲，白天較舒適 ・ 長袖上衣＋薄外套","11–20°C ・ 多雲時晴 ・ 長袖上衣＋方便穿脫的外套"];
+const TODO=["護照（效期 6 個月以上）","Visit Japan Web 填寫","日幣現金與信用卡","網卡或 eSIM","電車票券／IC 卡","行動電源與充電線","常備藥品與雨具"];
+const WX=["晚間搭高鐵北上，早點休息，明早 06:00 出發","名古屋 9–21°C ・ 晴 ・ 降水 20%｜長袖＋薄毛衣＋外套","9–21°C ・ 晴のち曇 ・ 降水 30%｜清晨約 9°C 偏涼，長袖＋外套，可加薄圍巾","14–18°C ・ 曇のち雨 ・ 降水 90%、預估約 24mm｜防水外套、雨傘、防水鞋，午後雨勢較大","15–23°C ・ 曇のち晴 ・ 降水 30%｜長袖＋薄外套，中午偏暖","11–18°C ・ 晴一時雨 ・ 降水 50%｜早上約 11°C，長袖＋外套，帶折疊傘"];
+const WX_OLD=["8–20°C ・ 晴時多雲 ・ 長袖上衣＋薄毛衣＋外套","10–20°C ・ 晴，局部多雲 ・ 長袖上衣＋薄外套","12–20°C ・ 多雲，午後可能降雨 ・ 長袖上衣＋防風外套，帶雨具","12–21°C ・ 多雲，白天較舒適 ・ 長袖上衣＋薄外套","11–20°C ・ 多雲時晴 ・ 長袖上衣＋方便穿脫的外套"];
 const $=s=>document.querySelector(s);
 const tabs=$("#tabs");
-DAYS.forEach((D,n)=>{const b=document.createElement("button");b.style.setProperty("--c",D.c);b.setAttribute("role","tab");b.innerHTML=`第 ${n+1} 天<small>${D.d}（${D.w}）</small>`;b.onclick=()=>show(n);tabs.append(b)});
+DAYS.forEach((D,n)=>{const b=document.createElement("button");b.style.setProperty("--c",D.c);b.setAttribute("role","tab");b.innerHTML=`${n?"第 "+n+" 天":"行前日"}<small>${D.d}（${D.w}）</small>`;b.onclick=()=>show(n);tabs.append(b)});
 function show(n){
 const D=DAYS[n];
 [...tabs.children].forEach((b,k)=>{b.classList.remove("on");if(k==n){void b.offsetWidth;b.classList.add("on")}b.setAttribute("aria-selected",k==n)});
-$("#dtitle").textContent=`第 ${n+1} 天 ${D.d}（${D.w}）・${D.t}`;$("#wx").textContent="🌤 "+WX[n];document.querySelectorAll(".tip").forEach(s=>s.classList.toggle("show",s.dataset.days==String(n)));
-$("#tl").innerHTML=D.i.map((x,k)=>`<li style="--i:${k};--c:${D.c}"><div class="card"><time>${x[0]}</time> <span class="tag ${x[1]}">${KIND[x[1]]}</span>${x[3]?'<span class="tag must">必去</span>':''}<h3>${x[2]}</h3></div></li>`).join("");
+$("#dtitle").textContent=`${n?"第 "+n+" 天":"行前日"} ${D.d}（${D.w}）・${D.t}`;$("#wx").innerHTML="🌤 "+WX[n]+(n>0?' <a href="https://tenki.jp/forecast/5/26/5110/23100/10days.html" target="_blank" rel="noopener">tenki.jp ↗</a>':'');document.querySelectorAll(".tip").forEach(s=>s.classList.toggle("show",s.dataset.days==String(n)));
+$("#tl").innerHTML=D.i.map((x,k)=>`<li style="--i:${k};--c:${D.c}"><div class="card"><time>${x[0]}</time> <span class="tag ${x[1]}">${KIND[x[1]]}</span>${x[3]?'<span class="tag must">必去</span>':''}<h3>${x[4]?`<a href="${x[4]}" target="_blank" rel="noopener">${x[2]} ↗</a>`:x[2]}</h3></div></li>`).join("");
 }
 show(0);
 let saved={};try{saved=JSON.parse(localStorage.getItem("trip-todo")||"{}")}catch(e){}
@@ -258,7 +261,7 @@ function rl(id,a,p){$(id).innerHTML=a.map((t,k)=>`<label><input type="checkbox" 
 rl("#todolist",TODO,"t");rl("#packlist",PACK,"p");
 ["#todolist","#packlist"].forEach(i=>$(i).addEventListener("change",e=>{saved[e.target.dataset.k]=e.target.checked;try{localStorage.setItem("trip-todo",JSON.stringify(saved))}catch(x){}}));
 document.querySelectorAll("nav [data-go]").forEach(b=>b.onclick=()=>document.getElementById(b.dataset.go).scrollIntoView({behavior:matchMedia("(prefers-reduced-motion:reduce)").matches?"auto":"smooth"}));
-const start=new Date("2026-11-13T05:45:00+08:00");
+const start=new Date("2026-11-13T06:00:00+08:00");
 function tick(){const ms=start-new Date();const el=$("#count");
 if(ms<=0){el.innerHTML='<div style="width:auto;padding:4px 16px">旅程進行中或已結束 🌸</div>';return}
 const d=Math.floor(ms/864e5),h=Math.floor(ms%864e5/36e5),m=Math.floor(ms%36e5/6e4);
