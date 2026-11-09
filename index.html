@@ -181,15 +181,14 @@ footer{text-align:center;margin-top:28px;font-size:13px}
 <li>天守閘長期因木造重建不開放，請以官方公告為準。</li></ul></div>
 <div class="card"><span class="tag shop">11/16 下午購物</span><h3>榮商圈</h3>
 <ul><li>UNIQLO 栄スカイル店在榮スカイル 5 樓（中區榮 3-4-5）。</li>
-<li>無印良品在 Maruei Galleria 2 樓，為名古屋市內最大賣場。</li>
-<li>兩間都在榮站附近，我沒查到同一棟有兩個品牌的商場，請用地圖確認步行距離與營業時間。</li></ul></div>
+<li>無印良品在 Maruei Galleria 2 樓，為名古屋市內最大賣場。</li></ul></div>
 </section>
 <section id="last5" class="guide tip" data-days="5">
 <h2>🛫 回程小抄</h2>
 <div class="card"><span class="tag fly">11/17 回程</span><h3>建議 08:45 從飯店出發</h3>
 <ul><li>IT207 13:15 起飛、15:50 抵達桃園。你的行程表訂在 10:15 到機場，提前約 3 小時。</li>
 <li>飯店→伏見站→名古屋→名鐵名古屋約 25 分，再搭特急約 28–35 分，步行到航廈約 5 分。</li>
-<li>車資：名鐵名古屋→中部國際機場約 ¥980，若搭 μ-SKY 再加指定席 ¥450（合計約 ¥1,430），行李多時建議搭μ-SKY。</li>
+<li>車資：名鐵名古屋→中部國際機場約 ¥980，若搭 μ-SKY 再加指定席 ¥450（合計約 ¥1,430）。</li>
 <li>建議搭 09:30 左右的班次，留 15 分鐘緩衝比較安心。</li></ul></div>
 </section>
 
@@ -217,16 +216,11 @@ footer{text-align:center;margin-top:28px;font-size:13px}
 
 <section id="shopsec" class="guide">
 <h2>🛍 採購清單</h2>
-<div class="card">
-<div class="shop-form">
-<input id="shopin" type="text" placeholder="商品名稱（例如：伴手禮）" aria-label="商品名稱">
-<button id="shopadd" type="button">＋ 加入採購清單</button>
-</div>
+<div class="card"><div class="shop-form"><input id="shopin" type="text" placeholder="商品名稱（例如：伴手禮）" aria-label="商品名稱"><button id="shopadd" type="button">＋ 加入採購清單</button></div>
 <p class="shop-hint">清單只存在這支手機的瀏覽器，不會同步給其他人。</p>
-<div class="todo" id="shoplist"></div>
-</div>
+<div class="todo" id="shoplist"></div></div>
 </section>
-  
+
 <section id="todo">
 <h2>✅ 行前檢查</h2>
 <div class="card"><div class="todo" id="todolist"></div><div class="todo" id="ckcustom"></div><div class="shop-form" style="margin:10px 0 0"><input id="ckin" type="text" placeholder="自行新增檢查項目" aria-label="新增檢查項目"><button id="ckadd" type="button">＋ 新增</button></div></div>
@@ -304,10 +298,10 @@ $("#shoplist").addEventListener("change",e=>{const i=e.target.dataset.i;if(i!=nu
 function cityCard(k){const L=LOC[k],c=WD[k]&&WD[k].current;const now=c?`<div class="weather-now"><span class="wxicon" style="font-size:30px">${wc(c.weather_code)[0]}</span><div><strong>${Math.round(c.temperature_2m)}°C</strong><br><small>${wc(c.weather_code)[1]}・體感 ${Math.round(c.apparent_temperature)}°C・濕度 ${c.relative_humidity_2m}%</small></div></div>`:`<div class="weather-now"><div><small>目前無即時資料，顯示行程日預報${k==="ise"?"（伊勢使用名古屋快照）":""}</small></div></div>`;const days=DATES.slice(1).map(d=>{const o=getD(k,d);return o?`<div class="weather-day"><b>${d.slice(5).replace("-","/")}</b><span class="wxicon">${o.w[0]}</span><span>${o.x}°/${o.m}°</span><span>☂ ${o.p}%</span></div>`:""}).join("");return `<div class="weather-city"><h3>📍 ${L.n}</h3>${now}<div class="weather-days">${days}</div></div>`}
 function renderAll(){const el=$("#wxall");if(!el)return;el.innerHTML=`<div class="weather-grid">${Object.keys(LOC).map(k=>cityCard(k)).join("")}</div><p class="weather-meta">${wstat==="live"?"✅ Open-Meteo 即時資料，更新於 "+STAMP+"（每 10 分鐘自動更新）":"⚠ 無法連線 Open-Meteo，顯示 tenki.jp 名古屋快照（11/8 發布）"}</p><p class="weather-sources">來源：<a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a><a href="${LOC.nag.tk}" target="_blank" rel="noopener">tenki.jp 名古屋</a><a href="${LOC.ise.tk}" target="_blank" rel="noopener">tenki.jp 伊勢</a></p>`}
 function renderShop(){const el=$("#shoplist");el.innerHTML=shop.length?shop.map((s,i)=>`<div class="shop-item"><input type="checkbox" data-i="${i}" ${s.d?"checked":""} aria-label="已購買"><div class="shop-content"><span${s.d?' style="text-decoration:line-through;opacity:.55"':''}>${esc(s.n)}</span>${s.u?`<a href="${esc(s.u)}" target="_blank" rel="noopener">${esc(s.u)} ↗</a>`:""}${s.t?`<small>${esc(s.t)}</small>`:""}</div><button class="shop-delete" type="button" data-del="${i}">刪除</button></div>`).join(""):'<p class="shop-hint">還沒有項目，輸入想買的東西吧。</p>'}
-function addShop(){const a=$("#shopin"),b=$("#shopurl");let n=a.value.trim(),u=b.value.trim();if(/^https?:/i.test(n)&&!u){u=n;n=""}if(u&&!/^https?:/i.test(u))u="";if(!n&&u)n=guess(u);if(!n)return;shop.push({n:n,u:u,d:false,t:new Date().toLocaleDateString("zh-TW",{month:"numeric",day:"numeric"})+" 加入"});a.value="";b.value="";saveShop();renderShop()}
+function addShop(){const a=$("#shopin"),b=$("#shopurl")||{value:""};let n=a.value.trim(),u=b.value.trim();if(/^https?:/i.test(n)&&!u){u=n;n=""}if(u&&!/^https?:/i.test(u))u="";if(!n&&u)n=guess(u);if(!n)return;shop.push({n:n,u:u,d:false,t:new Date().toLocaleDateString("zh-TW",{month:"numeric",day:"numeric"})+" 加入"});a.value="";b.value="";saveShop();renderShop()}
 function adv1(o){const a=[o.x<=12?"厚外套":o.x<=17?"外套＋毛衣":o.x<=27?"長袖＋薄外套":"短袖"];if(o.p>=60)a.push("帶傘");else if(o.p>=30)a.push("備折疊傘");if(o.m<=10)a.push("圍巾");return a.join("・")}
 function renderWx(n){const el=$("#wx");if(!el)return;if(!n){el.textContent="🌙 行前日・晚間北上，早點休息";return}const k=DAYLOC[n][0],L=LOC[k],o=getD(k,DATES[n]);el.textContent=o?`${o.w[0]} ${L.n} ${o.x}°/${o.m}° ☂${o.p}% ｜ ${adv1(o)}`:"天氣資料載入中"}
-const CKS=["護照效期（6 個月以上）","長袖上衣4件、針織衫或薄毛衣、薄發熱衣","雨傘或防水外套","穿習慣、鞋底防滑的運動鞋或健走鞋","保暖物品、薄手套或帽子","藥品","日幣現金與信用卡","網卡或 eSIM","日本悠遊卡","行動電源與充電線"];
+const CKS=["護照效期（6 個月以上）","長袖上衣4件、針織衫或薄毛衣、薄發熱衣","雨傘或防水外套","穿習慣、鞋底防滑的運動鞋或健走鞋","保暖物品、薄手套或帽子","個人藥品","日幣現金與信用卡","網卡或 eSIM","日本悠遊卡","行動電源與充電線"];
 let ck=[];try{ck=JSON.parse(localStorage.getItem("trip-ck")||"[]")}catch(e){}
 function saveCk(){try{localStorage.setItem("trip-ck",JSON.stringify(ck))}catch(e){}}
 function renderCk(){$("#ckcustom").innerHTML=ck.map((c,i)=>`<div class="srow"><label><input type="checkbox" data-i="${i}" ${c.d?"checked":""}><span>${esc(c.n)}</span></label><button class="shop-delete" type="button" data-del="${i}">刪除</button></div>`).join("")}
@@ -316,6 +310,7 @@ $("#ckadd").onclick=addCk;$("#ckin").addEventListener("keydown",e=>{if(e.key==="
 $("#ckcustom").addEventListener("click",e=>{const b=e.target.closest("[data-del]");if(b){ck.splice(+b.dataset.del,1);saveCk();renderCk()}});
 $("#ckcustom").addEventListener("change",e=>{const i=e.target.dataset.i;if(i!=null){ck[+i].d=e.target.checked;saveCk()}});
 rl("#todolist",CKS,"k");renderCk();
+function addShop(){const a=$("#shopin"),n=a.value.trim();if(!n)return;shop.push({n:n,u:"",d:false,t:new Date().toLocaleDateString("zh-TW",{month:"numeric",day:"numeric"})+" 加入"});a.value="";saveShop();renderShop()}
 renderShop();renderAll();loadW();setInterval(loadW,600000);
 </script>
 </body>
